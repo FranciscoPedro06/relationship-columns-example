@@ -26,6 +26,9 @@ public class Subject {
     @JoinColumn(name = "teacher_id", referencedColumnName = "id", insertable = false, updatable = false)
     private Teacher teacher;
 
+    @OneToMany(mappedBy = "subject")
+    private List<SubjectStudent> subjectStudents = new ArrayList<>();
+
     public Subject() {
     }
 

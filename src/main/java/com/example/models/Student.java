@@ -13,11 +13,14 @@ public class Student {
     @Column(name = "id")
     private int id;
 
+    public Student() {
+    }
+
     @Column(name = "name")
     private String name;
 
-    public Student() {
-    }
+    @OneToMany(mappedBy = "student")
+    private List<SubjectStudent> subjectStudents = new ArrayList<>();
 
     public Student(String name) {
         this.name = name;
