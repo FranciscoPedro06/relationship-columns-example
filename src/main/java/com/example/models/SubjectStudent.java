@@ -12,11 +12,11 @@ public class SubjectStudent {
     private int id;
 
     @Column(name = "subject_id")
-    private int SubjectId;
+    private int subjectId;
 
     @ManyToOne
     @JoinColumn(name = "subject_id", referencedColumnName = "id", insertable = false, updatable = false)
-    private int Subject;
+    private int subject;
 
     @Column(name = "student_id")
     private int studentId;
@@ -24,6 +24,38 @@ public class SubjectStudent {
     @ManyToOne
     @JoinColumn(name = "student_id", referencedColumnName = "id", insertable = false, updatable = false)
     private int student;
+
+    public int getSubjectId() {
+        return subjectId;
+    }
+
+    public void setSubjectId(int subjectId) {
+        this.subjectId = subjectId;
+    }
+
+    public int getSubject() {
+        return subject;
+    }
+
+    public void setSubject(int subject) {
+        this.subject = subject;
+    }
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
+
+    public int getStudent() {
+        return student;
+    }
+
+    public void setStudent(int student) {
+        this.student = student;
+    }
 
     public SubjectStudent() {
     }
